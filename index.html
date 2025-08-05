@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Peludos F.C.</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    header {
+      background-color: #45150D;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #000000;
+    }
+
+    nav a {
+      color: #d9ad26;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #45150D;
+      color: #ffffff;
+    }
+
+    .section {
+      display: none;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h2 {
+      color: #45150D;
+      border-bottom: 2px solid #d9ad26;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      color: #d9ad26;
+    }
+
+    .group-photo {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      border: 4px solid #45150D;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #f8f8f8;
+    }
+
+    table, th, td {
+      border: 1px solid #45150D;
+    }
+
+    th {
+      background-color: #d9ad26;
+      color: #000000;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    .section p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>PELUDOS Y NADA MÁS</h1>
+  <p>Pasión, Goles (en contra) y Amistad</p>
+</header>
+
+<nav>
+  <a href="#" onclick="mostrarSeccion('jugadores')">Jugadores</a>
+  <a href="#" onclick="mostrarSeccion('fixture')">Fixture </a>
+  <a href="#" onclick="mostrarSeccion('historia')">Historia</a>
+</nav>
+
+<!-- Jugadores -->
+<div id="jugadores" class="section active">
+  <h2>Plantel</h2>
+  <p><strong>Capitán:</strong> Felipe Acosta</p>
+  <p><strong>Jugadores:</strong> Mateo "Toto" Viana, Bruno Lapatie, Martin Garcia, Esteban Zipitria, Valentin Soto, Santiago Olivera, Renzo Ramirez</p>
+
+  <h3>Foto grupal</h3>
+  <img src="https://eldoce.tv/resizer/v2/la-liga-empate-comenzo-el-sabado-24-TSMCQAF27VEYDCIONCJ5US6KHQ.jpg?auth=efcac22e1384f7e319b4c94159e71032678cc9dc2810142ca60dac798dc27393&width=1440" alt="Foto del equipo" class="group-photo">
+</div>
+
+<!-- Fixture -->
+<div id="fixture" class="section">
+  <h2>Fixture</h2>
+  <ul>
+    <li>📅 7/08 vs Simios</li>
+    <li>📅 / vs </li>
+    <li>📅 / vs </li>
+  </ul>
+
+</div>
+
+<!-- Historia -->
+<div id="historia" class="section">
+  <h2>Nuestra Historia</h2>
+  <p>El Club de Fútbol Entre Amigos nació en 2023 con el simple sueño de jugar entre risas, goles y amistades. Sin títulos, sin técnicos profesionales, pero con corazón en cada pase.</p>
+  <p>Desde canchas de tierra hasta torneos barriales, esta banda de locos fue creciendo, sumando anécdotas, festejos y alguna que otra pelea por penales mal cobrados. Hoy somos más que un equipo, somos una familia futbolera.</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Club de Fútbol Entre Amigos</p>
+</footer>
+
+<script>
+  function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll('.section');
+    secciones.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
